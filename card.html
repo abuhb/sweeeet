@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHS-Card</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+<link rel="stylesheet" href="https://abuhb.github.io/sweet-ui/css/colours.css">
+    <style>
+        body {
+            font-size: 0.9em;
+        }
+
+        .nhs-container {
+            margin: auto auto;
+            max-width: 1200px;
+            padding: 0px 10px;
+            background: #f9fafb;
+            color: #231f20;
+            min-height: 100vh;
+            box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        }
+        .nhs-card-container {
+            display: grid; 
+            grid-template-columns: 1fr 1fr 1fr; 
+            grid-template-rows: 1fr; 
+            gap: 10px 20px; 
+        }
+
+    .nhs-card {
+    margin: 10px auto 10px auto;
+    padding: 0px 10px 60px 10px;
+    background: #fff;
+    color: #000;
+    border: solid 1px #E8EDEE;
+    border-radius: 5px 10px;
+    cursor: pointer;
+    width: 100%;
+    /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); */
+    text-align: center;
+    position: relative;
+    }
+
+    .nhs-card:hover {
+        box-shadow: 0 3px 10px rgb(0 169 206 / 0.6);
+        border: solid 1px rgb(0 169 206 / 0.6);
+    }
+
+    .nhs-card label {
+    color: #005EB8;
+    margin-right: 12px;
+    font-weight: 600;
+    }
+
+    .nhs-card h2 {
+    color: #003087;
+    font-size: 1.5rem;
+    margin-block-start: 0em;
+    margin-block-end: 0.2em;
+    padding: 10px 0px;
+    margin: 0px -10px 15px -10px;
+    }
+
+    .covid {
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#20fc28+48,dd231c+100&0+90,1+99 */
+background: -moz-linear-gradient(45deg,  rgba(32,252,40,0) 48%, rgba(185,77,30,0) 90%, rgba(217,39,28,1) 99%, rgba(221,35,28,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg,  rgba(32,252,40,0) 48%,rgba(185,77,30,0) 90%,rgba(217,39,28,1) 99%,rgba(221,35,28,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg,  rgba(32,252,40,0) 48%,rgba(185,77,30,0) 90%,rgba(217,39,28,1) 99%,rgba(221,35,28,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0020fc28', endColorstr='#dd231c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+border-radius: 4px 9px 0px 0px;
+
+    }
+
+    .ncovid {
+
+background: -moz-linear-gradient(45deg,  rgba(32,252,40,0) 48%, rgba(43,217,30,0) 90%, rgba(45,210,27,1) 99%, rgba(45,209,27,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg,  rgba(32,252,40,0) 48%,rgba(43,217,30,0) 90%,rgba(45,210,27,1) 99%,rgba(45,209,27,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg,  rgba(32,252,40,0) 48%,rgba(43,217,30,0) 90%,rgba(45,210,27,1) 99%,rgba(45,209,27,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0020fc28', endColorstr='#2dd11b',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+border-radius: 4px 9px 0px 0px;
+    }
+
+    .nhs-card p {
+        margin-block-end: 0em;
+    }
+
+    .nhs-card footer {
+        position: absolute; 
+        bottom: 0; 
+        margin: 0px -10px 0px -10px;
+        width: 100%; 
+        border-radius: 0px 0px 4px 9px;
+        padding: 6px 0px;
+    }
+
+    @media (max-width: 800px) {
+        .nhs-card-container {
+            display: grid; 
+            grid-template-columns: 1fr; 
+            grid-template-rows: 1fr; 
+            gap: 0px 0px; 
+        }
+    }
+
+    </style>
+</head>
+<body>
+    <div class="nhs-container">
+    <h1>NHS Card</h1>
+
+    <div class="nhs-card-container">
+
+        <div class="nhs-card">
+            <h2 class="covid">Jake Testerson</h2>
+            <p><label>NHS Number</label>999-999-9991</p>
+            <p><label>DOB</label>01/06/2001</p>
+            <p><label>Alerts</label>
+                <ul>
+                    <li>History of Multi Drug Resistant Organisms</li>
+                    <li>Patient on anticoagulants</li>
+                    <li>Potential M.chimaera exposure. Contact micro, cardiology if unwell or sternal wound infection</li>
+                    <li>Mrsa History</li>
+                </ul>
+            </p>
+            <p><label>Comments</label>Tripped on banana skin.</p>
+            <p><label>Specialty</label>Orthopaedics <label>Consultant</label>RPOR</p>
+
+            <footer class="nhs-blue">
+                <p>Bed 1 (7 days)</p>
+            </footer>
+
+    </div>
+
+        <div class="nhs-card">
+            <h2 class="ncovid">Lesley Testerbrosky</h2>
+            <p><label>NHS Number</label>999-999-9992</p>
+            <p><label>DOB</label>01/06/2001</p>
+            <p><label>Alerts</label>
+                <ul>
+                    <li>National Shielding (auto populated)</li>
+                    <li>Patient on anticoagulants</li>
+                </ul>
+            </p>
+            <p><label>Comments</label>Broken finger playing bingo</p>
+            <p><label>Specialty</label>Orthopaedics <label>Consultant</label>RPOR</p>
+            <footer class="nhs-red">
+                <p>Bed 2 (18 days)</p>
+            </footer>
+
+    </div>
+
+        <div class="nhs-card">
+            <h2 class="ncovid">Tom Testins</h2>
+            <p><label>NHS Number</label>999-999-9993</p>
+            <p><label>DOB</label>01/06/2001</p>
+            <p><label>Alerts</label>
+                <ul>
+                    <li>Known to Oncology</li>
+                </ul>
+            </p>
+            <p><label>Comments</label>Flare up of old nintendo injury.</p>
+            <p><label>Specialty</label>Orthopaedics <label>Consultant</label>RPOR</p>
+
+            <footer class="nhs-blue">
+                <p>Bed 3 (3 days)</p>
+            </footer>
+        </div>
+
+        <div class="nhs-card">
+            <h2 class="ncovid">Cerys Testermichael</h2>
+            <p><label>NHS Number</label>999-999-9991</p>
+            <p><label>DOB</label>01/06/2001</p>
+            <p><label>Alerts</label>
+                <ul>
+                    <li>History of Multi Drug Resistant Organisms</li>
+                    <li>Patient on anticoagulants</li>
+                </ul>
+            </p>
+            <p><label>Comments</label>Tripped on banana skin.</p>
+            <p><label>Specialty</label>Orthopaedics <label>Consultant</label>RPOR</p>
+
+            <footer class="nhs-blue">
+                <p>Bed 4 (7 days)</p>
+            </footer>
+
+    </div>
+
+
+
+    <div class="nhs-card">
+        
+        <footer class="nhs-light-grey">
+            <p>Bed 5</p>
+        </footer>
+    </div>
+
+
+    
+
+    <div class="nhs-card">
+        <h2 class="covid">Rhys Testall</h2>
+        <p><label>NHS Number</label>999-999-9991</p>
+        <p><label>DOB</label>01/06/2001</p>
+        <p><label>Alerts</label>
+            <ul>
+                <li>Potential M.chimaera exposure. Contact micro, cardiology if unwell or sternal wound infection</li>
+                <li>Mrsa History</li>
+            </ul>
+        </p>
+        <p><label>Comments</label>Tripped on banana skin.</p>
+        <p><label>Specialty</label>Orthopaedics <label>Consultant</label>RPOR</p>
+
+        <footer class="nhs-blue">
+            <p>Bed 6 (7 days)</p>
+        </footer>
+
+</div>
+
+<div class="nhs-card">
+    
+    <footer class="nhs-light-grey">
+        <p>Bed 7</p>
+    </footer>
+</div>
+<div class="nhs-card">
+    
+    <footer class="nhs-light-grey">
+        <p>Bed 8</p>
+    </footer>
+</div>
+<div class="nhs-card">
+    
+    <footer class="nhs-light-grey">
+        <p>Bed 9</p>
+    </footer>
+</div>
+<div class="nhs-card">
+    
+    <footer class="nhs-light-grey">
+        <p>Bed 10</p>
+    </footer>
+</div>
+<div class="nhs-card">
+    
+    <footer class="nhs-light-grey">
+        <p>Bed 11</p>
+    </footer>
+</div>
+<div class="nhs-card">
+    
+    <footer class="nhs-light-grey">
+        <p>Bed 12</p>
+    </footer>
+</div>
+<div class="nhs-card">
+    
+    <footer class="nhs-light-grey">
+        <p>Bed 13</p>
+    </footer>
+</div>
+
+<!-- NHS Grid -->
+</div>
+
+
+
+</div>
+</body>
+</html>
